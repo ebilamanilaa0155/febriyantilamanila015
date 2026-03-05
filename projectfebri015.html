@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikasi Biodata Mahasiswa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .hasil {
+            margin-top: 15px;
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Biodata Mahasiswa</h2>
+
+    <label>Nama</label>
+    <input type="text" id="nama">
+
+    <label>NIM</label>
+    <input type="text" id="nim">
+
+    <label>Jurusan</label>
+    <input type="text" id="jurusan">
+
+    <label>Alamat</label>
+    <textarea id="alamat"></textarea>
+
+    <button onclick="tampilkanBiodata()">Tampilkan Biodata</button>
+
+    <div class="hasil" id="output"></div>
+</div>
+
+<script>
+function tampilkanBiodata() {
+    var nama = document.getElementById("nama").value;
+    var nim = document.getElementById("nim").value;
+    var jurusan = document.getElementById("jurusan").value;
+    var alamat = document.getElementById("alamat").value;
+
+    document.getElementById("output").innerHTML =
+        "<h3>Hasil Biodata</h3>" +
+        "Nama: " + nama + "<br>" +
+        "NIM: " + nim + "<br>" +
+        "Jurusan: " + jurusan + "<br>" +
+        "Alamat: " + alamat;
+}
+</script>
+
+</body>
+</html>
