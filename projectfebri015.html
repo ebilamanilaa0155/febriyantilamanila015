@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
         }
 
         .container {
@@ -20,7 +20,7 @@
 
         h2 {
             text-align: center;
-            color: #2c3e50;
+            color: #e67e22;
         }
 
         label {
@@ -40,7 +40,7 @@
             width: 100%;
             padding: 10px;
             margin-top: 10px;
-            background-color: #3498db;
+            background-color: #e67e22;
             color: white;
             border: none;
             border-radius: 8px;
@@ -49,22 +49,22 @@
         }
 
         button:hover {
-            background-color: #2980b9;
+            background-color: #d35400;
         }
 
         .hasil {
             margin-top: 15px;
-            background: #ecf0f1;
+            background: #fdf2e9;
             padding: 10px;
             border-radius: 8px;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid #e67e22;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Biodata Mahasiswa</h2>
+    <h2>Biodata Mahasiswa - Versi Baru</h2>
 
     <label>Nama</label>
     <input type="text" id="nama">
@@ -74,6 +74,9 @@
 
     <label>Jurusan</label>
     <input type="text" id="jurusan">
+
+    <label>Fakultas</label>
+    <input type="text" id="fakultas">
 
     <label>Alamat</label>
     <textarea id="alamat"></textarea>
@@ -88,6 +91,7 @@ function tampilkanBiodata() {
     var nama = document.getElementById("nama").value;
     var nim = document.getElementById("nim").value;
     var jurusan = document.getElementById("jurusan").value;
+    var fakultas = document.getElementById("fakultas").value;
     var alamat = document.getElementById("alamat").value;
 
     document.getElementById("output").innerHTML =
@@ -95,6 +99,7 @@ function tampilkanBiodata() {
         "Nama: " + nama + "<br>" +
         "NIM: " + nim + "<br>" +
         "Jurusan: " + jurusan + "<br>" +
+        "Fakultas: " + fakultas + "<br>" +
         "Alamat: " + alamat;
 }
 </script>
